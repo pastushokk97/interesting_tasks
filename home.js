@@ -6,7 +6,9 @@ function amount(number) {
     number = number / 2;
     totalIterations = i;
 
-    if(number < 50) return totalIterations; 
+    if (number < 50) {
+       return totalIterations; 
+    }
   }
 }
 
@@ -27,12 +29,15 @@ function contain(number) {
   const array = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
 
   for (let i = 0; i < array.length; i++) {
-    if(array[i].includes(number)) return number;
+    if (array[i].includes(number)){
+       return number;
+    }
   }
 
   return null;
 }
-
+const array = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
+console.log(array[1][0]);
 //task 4
 const auto = [
   { model: 'BMW', creationDate: 2020 },
@@ -42,12 +47,10 @@ const auto = [
 ];
 
 function sortByYear(array) {
-  return array
-        .map((element) =>  {
-          return element;
-        })
+  const newArr = array;
+
+  return newArr
         .sort((a,b) => {
           return b.creationDate - a.creationDate;
         })
 }
-
