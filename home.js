@@ -51,5 +51,3 @@ function sortByYear(array) {
         })
 }
 
-console.log(sortByYear(auto),'w')
-console.log(auto,'c')
