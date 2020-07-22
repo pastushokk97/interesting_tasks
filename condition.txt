@@ -1,0 +1,28 @@
+Task 1 - Create a function that takes an array of objects and returns a new array. 
+The new array must be a copy of the original array, 
+which was accepted as a function parameter,
+but at the same time sorted by the car's release date. 
+Array: [
+  { model: 'BMW', creationDate: 2020 },
+  { model: 'Audi', creationDate: 2015 },
+  { model: 'Volvo', creationDate: 2019 },
+  { model: 'Mercedes', creationDate: 2010 },
+];
+
+-----------------------------------------------------------------------------------
+
+Task 2 - Create a function that takes an array of numbers and returns a new array.
+The new array must contain a product of all numbers except the given one.
+Example: 
+Given array: [1,2,3,4];
+Return array: [24,12,8,6];
+
+-----------------------------------------------------------------------------------
+
+Task 3 - Create a function that takes a string,
+and return first coincidence element of string
+Example: 'ABCA' return 'A',
+         'ABCBA' return 'B',
+         'ABC' return null
+
+-----------------------------------------------------------------------------------

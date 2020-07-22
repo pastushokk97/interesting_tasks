@@ -1,44 +1,5 @@
 //task 1
-function amount(number) {
-  let totalIterations = 0;
-  for (let i = 1; i < number; i++) {
-    
-    number = number / 2;
-    totalIterations = i;
-
-    if (number < 50) {
-       return totalIterations; 
-    }
-  }
-}
-
-//task 2
-function squarRoot() {
-  const numbers = [4, 2, 5, 19, 13, 0, 10];
-  let sum = 0;
-
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
-
-  return Math.sqrt(Math.pow(sum,3))
-}
-
-//task 3
-function contain(number) {
-  const array = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
-
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].includes(number)){
-       return number;
-    }
-  }
-
-  return null;
-}
-const array = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
-console.log(array[1][0]);
-//task 4
+//lead time ~= 0.155ms
 const auto = [
   { model: 'BMW', creationDate: 2020 },
   { model: 'Audi', creationDate: 2015 },
@@ -50,7 +11,44 @@ function sortByYear(array) {
   const newArr = array;
 
   return newArr
-        .sort((a,b) => {
-          return b.creationDate - a.creationDate;
-        })
+    .sort((a,b) => {
+      return b.creationDate - a.creationDate;
+    });
 }
+
+//task 2
+//lead time ~= 0.240ms
+function multiplyEachElement(array) {
+  let result = [];
+  let sum = 1;
+
+  for(let i = 0; i< array.length; i++) {
+    sum *= array[i];
+  }
+
+  for (let i = 0; i < array.length; i++) {
+    result.push(sum / array[i]);
+  }
+
+  return result
+} 
+
+//task 3
+//lead time ~= 0.240ms
+function coincidenceInString(string) {
+  const newString  = string
+    .replace(/\s/g,'')
+    .toLowerCase()
+    .split('')
+    .sort();
+
+  for (let i = 1; i < newString.length; i++) {
+    if (newString[i-1] === newString[i]) {
+      return newString[i];
+    }
+  };
+
+  return newString
+}
+
+module.exports = coincidenceInString;
