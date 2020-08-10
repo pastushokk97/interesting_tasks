@@ -51,4 +51,35 @@ function coincidenceInString(string) {
   return newString
 }
 
-module.exports = coincidenceInString;
+
+function happy(number,counter) {
+  let string = String(number);
+  let result = 0;
+  for (let i = 0; i < string.length; i++) {
+    result += Math.pow(parseInt(string[i]),2);
+  }
+  counter += 1;
+
+  if(counter >= 1000) return false;
+
+  return result === 1 ? true : happy(result,counter);
+}
+
+function stonesWeight(array) {
+
+  const max = Math.max(...array);
+  const index = array.indexOf(max);
+
+  array.splice(index,1);
+
+  const secondMax = Math.max(...array);
+  const indexSecond = array.indexOf(secondMax);
+
+  array.splice(indexSecond,1);
+
+  array.push(max - secondMax);
+
+  return array.length === 1 ? array[0] : stonesWeight(array);
+}
+
+module.exports = stonesWeight;
