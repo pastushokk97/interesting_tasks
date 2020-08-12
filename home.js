@@ -51,20 +51,8 @@ function coincidenceInString(string) {
   return newString
 }
 
-
-function happy(number,counter) {
-  let string = String(number);
-  let result = 0;
-  for (let i = 0; i < string.length; i++) {
-    result += Math.pow(parseInt(string[i]),2);
-  }
-  counter += 1;
-
-  if(counter >= 1000) return false;
-
-  return result === 1 ? true : happy(result,counter);
-}
-
+//task 4
+//lead time ~= 0.175ms
 function stonesWeight(array) {
 
   const max = Math.max(...array);
@@ -82,4 +70,32 @@ function stonesWeight(array) {
   return array.length === 1 ? array[0] : stonesWeight(array);
 }
 
-module.exports = stonesWeight;
+//task 5
+//lead time ~= 0.191ms
+const resultSquare = [];
+function happy(number) {
+  let string = String(number);
+  let result = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    result += Math.pow(parseInt(string[i]),2);
+  }
+  if(resultSquare.includes(result)) return false;
+  resultSquare.push(result);
+
+  return result === 1 ? true : happy(result);
+}
+
+//task 6
+//lead time ~= 0.134ms
+function factorial(n) {
+  let result = 1;
+
+  for (let i = 2; i <= n; i++) {
+    result *= i 
+  }
+
+  return result;
+}
+
+module.exports = happy;
