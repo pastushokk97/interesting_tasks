@@ -1,0 +1,50 @@
+html {
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%
+}
+body {
+  margin:0
+}
+.small-container {
+  max-width:1200px;padding:0 1rem;margin-left:auto;margin-right:auto
+} 
+.small-container {
+  max-width:800px
+}
+.item {
+  display: block;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  padding: .75rem;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+}
+.clearAll {
+  border: 1px solid #0366ee;
+  border-radius: 4px;
+  background: #0366ee;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: .75rem 1.25rem;
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+  margin-top: 10px;
+}
+
+ul {
+  list-style: disc;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  font-size: larger;
+} 
+
+@media screen and (max-width: 900px) {
+  .item {
+    width:90%
+  }
+}
