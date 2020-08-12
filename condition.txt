@@ -26,3 +26,43 @@ Example: 'ABCA' return 'A',
          'ABC' return null
 
 -----------------------------------------------------------------------------------
+
+Task 4 - Heaviest
+We have a collections of stones, each stone has a positive integer weight
+Each turn, we choose two heaviest stones and smash them together.
+Suppose the stones have weights x and y with x<=y. The result of this smash is:
+
+  if x==y, both stones are tottaly destroyed;
+  if x!=y, the stone of weight x is tottaly destroyed, and the stone of weight y has new weight y-x;
+
+At the end, there is at most 1 stone left. Return the weight of this stone(or 0 if there are no stones left.)
+Example:
+Input: [2,7,4,1,8,1];
+Output: 1
+Explanation: 
+We combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,
+We combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
+We combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
+We combine 1 and 1 to get 0 so the array converts to [1] then that's the value of last stone.
+
+-----------------------------------------------------------------------------------
+
+Task 5 - Happy number
+A happy number is a number defined by the following procces: Starting with any positive integer,
+replace the number by the sum of the squares of its digits? and repeat the procces until the number equals 1(where it will stay),
+or it loops endlessly in a cycle which doesn't include 1. Those numbers for which this procces ends in 1 are happy numbers.
+Return true if n is a happy number, and false if not.
+
+Input: 19
+Output: true
+Explanation: 
+1^2 + 9^2 = 82;
+8^2 + 2^2 = 68;
+6^2 + 8^2 = 100;
+1^2 + 0^2 + 0^2 = 1;
+
+-----------------------------------------------------------------------------------
+
+Task 6 - Factorial
+In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n.
+Create a function that takes a number and return a factorial of this number. If number is negative - return null. 
